@@ -1,74 +1,52 @@
-# Spacebook
+# Интерактивная документация по алгоритмам
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68791233-b2d6-4a86-8c42-e654e112a157/deploy-status)](https://app.netlify.com/sites/spacebook-app/deploys)
+Идея проекта: создать легкую для понимания документацию по алгоритмам.
 
-Create your own spacebook and customize it to your needs. Spacebooks are speedy to set up, free, and 100% open source. Spacebooks are modern notebooks you can use to create documentation, sketch out new ideas, build a simple website, or whatever suits your fancy. 
+## Требования
 
----
-
-<p align="center">
-<strong><big>Demo and documentation:</big></strong><br /> 
-</p>
-
-<p align="center">
-<strong>https://spacebook.app</strong> <br />
-</>
-
-<p align="center">
-🙋 💥 👩🏽‍🚀 🚀 👨‍🚀 🛰️
-</p>
-
----
-
-## Contributing
-
-If you want to contribute or make fixes to spacebook, it is best to fork this repository directly and submit pull requests against it. If you spot a typo on the demo/documentation site, you can also open a fork directly from the edit button on the top of each page.
-
-## Install spacebook
-
-If you want to quickly install for local testing follow the instructions below:
-
-### Requirements
-
-You must be running **Node version 12 or higher** due to the Tailwind 2.0 release. I recommend using NVM to easily manage your Node versions if you need to switch back and forth between older versions.
+Необходимо использовать Node версии 12 или выше.
 
 - [Node](https://nodejs.org/)
-- [NVM](https://github.com/nvm-sh/nvm) (optional)
+- [NVM](https://github.com/nvm-sh/nvm) (опционально)
 
-**To find your current node version:**
+Посмотреть версию Node можно командой:
 
 ```
 node --version
 ```
 
-### Step one
+## Установка проекта
 
+Для установки следуйте приведенным ниже инструкциям:
+
+1. Склонируйте репозиторий в текущую папку:
+
+```bash
+git clone https://github.com/physcodestyle/turing-garden
 ```
-git clone https://github.com/broeker/spacebook
-```
 
-### Step two
+2. Установите необходимые модули и выполните начальную команду сборки:
 
-Install the site and run an initial build command:
-
-```
-cd spacebook
-
+```bash
+cd turing-garden
 npm install
-
-npm run build (only necessary the first time!)
+npm run build (необходимо только для первого раза сборки!)
 ```
 
-_If you get errors here, double check your node version!_
+3. Запустите свой локальный сервер, чтобы увидеть сайт по адресу [http://localhost:8080](http://localhost:8080):
 
-### Step three
-
-Now spin up your local server to see your site!
-
-```
+```bash
 npm run start
 ```
 
-This command will start a local server and you'll be able to work on your site with hot reloads and some nice Browsersync features. 💥
+## Дизайн
 
---- 
+При построении дизайн-системы учитываются следующие условия:
+
+1. Интерфейс должен быть доступным ([требования](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law)).
+2. Мотивация знакомства с материалами ресурса через дизайн.
+3. Поддержка широкого класса устройств (разрешения и ориентация экранов, плотность пикселей).
+4. Минимализм.
+5. Поддержка темной и светлой темы.
+
+Дизайн-система доступна для ознакомления и работы по [ссылке](https://www.figma.com/file/I4npGPJE7sXm7V9oPYUD9B/turing.garden?node-id=12%3A15).
