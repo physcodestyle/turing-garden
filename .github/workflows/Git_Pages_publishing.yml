@@ -20,4 +20,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: main # The branch the action should deploy to.
-          folder: turing-garden # The folder the action should deploy.
+          folder: _site # The folder the action should deploy.
