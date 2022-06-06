@@ -54,10 +54,10 @@ jobs:
         run: |
           npm run build
           if ! [[ ${{ env.SURGE_TOKEN == '' }} ]]; then
-            npx surge ./dist ${{ env.DEPLOY_DOMAIN }} --token ${{ env.SURGE_TOKEN }}
+            npx surge ./_site ${{ env.DEPLOY_DOMAIN }} --token ${{ env.SURGE_TOKEN }}
           else
             echo 'Публикация для форка репозитория'
-            npx surge ./dist ${{ env.DEPLOY_DOMAIN }} --token '6973bdb764f0d5fd07c910de27e2d7d0'
+            npx surge ./_site ${{ env.DEPLOY_DOMAIN }} --token '6973bdb764f0d5fd07c910de27e2d7d0'
           fi
           echo 'Ссылка на превью — ${{ env.DEPLOY_DOMAIN }}'
       - name: Сообщение об успехе публикации превью
