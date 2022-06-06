@@ -1,0 +1,22 @@
+name: Preview Surge
+on:
+  pull_request
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: build and deploy
+        uses: afc163/surge-preview@v1
+        id: preview_step
+        with:
+          surge_token: ${{ secrets.SURGE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dist: _site
+          build: |
+            npm ci
+            npm run build
+      - name: Generate message
+        run: echo "Preview: ${{ steps.preview_step.outputs.preview_url }}"
