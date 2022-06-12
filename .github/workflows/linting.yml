@@ -42,4 +42,4 @@ jobs:
       - name: Установка необходимых зависимостей
         run:  npm install --save-dev stylelint-config-standard
       - name: Проверка линтером CSS
-        run: npx stylelint '../_site/*.css'
+        run: npx stylelint '_site/*.css'
