@@ -1,5 +1,5 @@
 if (localStorage.getItem("password")) {
- insertPlainHTML(atob(localStorage.getItem("password")));
+    insertPlainHTML(atob(localStorage.getItem("password")));
 } else {
     document
       .getElementById("staticrypt-form")
